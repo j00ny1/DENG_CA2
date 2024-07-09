@@ -1,3 +1,8 @@
+create database SPAI2A0206;
+
+use SPAI2A0206;
+go
+
 create table Customer (
 CustomerID varchar(10) primary key,
 FirstName varchar(20) not null,
