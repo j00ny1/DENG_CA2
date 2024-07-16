@@ -54,3 +54,18 @@ foreign key (CustomerID) references Customer(CustomerID),
 foreign key (ModelCode) references ModelType(ModelCode),
 foreign key (ModelID) references Model(ModelID)
 )
+
+-- Bulk Insert Data from CSV into Customers Table
+BULK INSERT Customer
+FROM 'C:\customer.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
+
+
+
+
