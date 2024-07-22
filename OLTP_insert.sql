@@ -72,9 +72,9 @@ WITH
     TABLOCK
 );
 
--- Bulk Insert Data from CSV into Orders Table
-BULK INSERT Customer
-FROM 'C:\customer.csv'
+-- Bulk Insert Data from CSV into Customer Table
+BULK INSERT customer
+FROM 'C:\updated_customer.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -83,4 +83,47 @@ WITH
     TABLOCK
 );
 
+-- Bulk Insert Data from CSV into orders Table
+BULK INSERT orders
+FROM 'C:\updated_order.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
+
+-- Bulk Insert Data from CSV into Model Table
+BULK INSERT model
+FROM 'C:\updated_model.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
+
+-- Bulk Insert Data from CSV into ModelType Table
+BULK INSERT modeltype
+FROM 'C:\updated_modelType.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
+
+-- Bulk Insert Data from CSV into Dataset Table
+BULK INSERT dataset
+FROM 'C:\updated_dataset.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
 
