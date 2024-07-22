@@ -1,3 +1,9 @@
+/* 
+Class: 2A/02
+Group: 6
+SQL Purpose: Create Data warehouse dimension and fact tables
+*/
+
 create database SPAI2A0206;
 
 use SPAI2A0206;
@@ -55,7 +61,18 @@ foreign key (ModelCode) references ModelType(ModelCode),
 foreign key (ModelID) references Model(ModelID)
 )
 
--- Bulk Insert Data from CSV into Customers Table
+-- Bulk Insert Data from CSV into Employee Table
+BULK INSERT employee
+FROM 'C:\updated_employee.csv'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
+
+-- Bulk Insert Data from CSV into Orders Table
 BULK INSERT Customer
 FROM 'C:\customer.csv'
 WITH
@@ -65,7 +82,5 @@ WITH
     ROWTERMINATOR = '\n',
     TABLOCK
 );
-
-
 
 
