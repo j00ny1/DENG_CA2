@@ -28,10 +28,10 @@ Gender char(1) not null
 create table Dataset(
 DatasetID varchar(10) primary key,
 DatasetName varchar(50) not null
-);
-
-create table ModelType(
-ModelCode varchar(10) primary key,
+);)
+)
+create table ModelType()
+ModelCode varchar(10) primar)y key,
 ModelType varchar(50) not null
 );
 

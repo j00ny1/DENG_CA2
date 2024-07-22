@@ -63,12 +63,12 @@ CREATE TABLE OrderDim (
 );
 
 CREATE TABLE Fact (
-    ModelKey VARCHAR NOT NULL,
-    OrderKey VARCHAR NOT NULL,
-    CustomerKey VARCHAR NOT NULL,
-    EmployeeKey VARCHAR NOT NULL,
+    ModelKey VARCHAR(10) NOT NULL,
+    OrderKey VARCHAR(10) NOT NULL,
+    CustomerKey VARCHAR(10) NOT NULL,
+    EmployeeKey VARCHAR(10) NOT NULL,
     TimeKey INT NOT NULL,
-    DatasetKey VARCHAR NOT NULL,
+    DatasetKey VARCHAR(10) NOT NULL,
     Price INT NOT NULL,
     FOREIGN KEY (ModelKey) REFERENCES ModelDim(ModelKey),
     FOREIGN KEY (OrderKey) REFERENCES OrderDim(OrderKey),
