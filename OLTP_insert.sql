@@ -28,10 +28,10 @@ Gender char(1) not null
 create table Dataset(
 DatasetID varchar(10) primary key,
 DatasetName varchar(50) not null
-);)
-)
-create table ModelType()
-ModelCode varchar(10) primar)y key,
+);
+
+create table ModelType(
+ModelCode varchar(10) primary key,
 ModelType varchar(50) not null
 );
 
@@ -68,7 +68,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
@@ -79,7 +79,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
@@ -90,7 +90,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
@@ -101,7 +101,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
@@ -112,7 +112,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
@@ -123,7 +123,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '\n',
+    ROWTERMINATOR = '0x0A',
     TABLOCK
 );
 
