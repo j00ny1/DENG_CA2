@@ -70,7 +70,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
@@ -81,7 +81,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
@@ -92,7 +92,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
@@ -103,7 +103,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
@@ -114,7 +114,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
@@ -125,7 +125,7 @@ WITH
 (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
-    ROWTERMINATOR = '0x0A', -- use '\n' if msg 4863 error
+    ROWTERMINATOR = '\n', -- use '0x0A' if msg 4863 error
     TABLOCK
 );
 
