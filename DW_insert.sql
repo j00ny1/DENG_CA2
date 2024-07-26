@@ -23,7 +23,7 @@ SELECT
     TrainingDate, 
     Accuracy, 
     DatasetID 
-FROM 
+FROM SPAI2A0206..Model
 
 ------------ DatasetDim --------------
 INSERT INTO SPAIDW2A0206..DatasetDim(DatasetID, DatasetName)
@@ -92,3 +92,20 @@ BEGIN
 END;
 
 ------------ Fact --------------
+INSERT INTO SPAIDW2A0206..Fact (ModelKey, OrderKey, CustomerKey, EmployeeKey, TimeKey, DatasetKey, Price)
+SELECT 
+    m.ModelKey, 
+    o.OrderKey, 
+    c.CustomerKey, 
+    e.EmployeeKey, 
+    t.TimeKey, 
+    d.DatasetKey, 
+    ord.Price
+FROM 
+    SPAI2A0206..Orders ord
+JOIN SPAIDW2A0206..ModelDim m ON ord.ModelID = m.ModelID
+JOIN SPAIDW2A0206..OrderDim o ON ord.OrderID = o.OrderID
+JOIN SPAIDW2A0206..CustomerDim c ON ord.CustomerID = c.CustomerID
+JOIN SPAIDW2A0206..EmployeeDim e ON ord.EmployeeID = e.EmployeeID
+JOIN SPAIDW2A0206..TimeDim t ON ord.OrderDate = t.[Date]
+JOIN SPAIDW2A0206..DatasetDim d ON m.DatasetID = d.DatasetID;
